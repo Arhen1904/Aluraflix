@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import { FaTimes } from "react-icons/fa";
+import { useState, useEffect } from "react";
+import { updateVideo } from "../../services/api";
 
 const ModalOverlay = styled.div`
   position: fixed;
@@ -14,12 +16,11 @@ const ModalOverlay = styled.div`
 `;
 
 const ModalContent = styled.div`
-  background-color: #fff;
+  background-color: #bfd4d5;
   padding: 20px;
   max-width: 600px;
   width: 100%;
   border-radius: 8px;
-  position: relative;
 `;
 
 const ModalHeader = styled.div`
@@ -90,14 +91,40 @@ const Button = styled.button`
   }
 `;
 
-const EditModal = ({ isOpen, onClose, tituloActual }) => {
+const EditModal = ({ isOpen, onClose, video, onSave }) => {
+  const [editedVideo, setEditedVideo] = useState({ ...video });
+
+  useEffect(() => {
+    setEditedVideo({ ...video });
+  }, [video]);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setEditedVideo((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
+
+  const handleSave = async () => {
+    try {
+      const updatedVideo = await updateVideo(editedVideo.id, editedVideo);
+      onSave(updatedVideo);
+      onClose();
+      alert('El video se actualizó correctamente.');
+    } catch (error) {
+      console.error('Error al actualizar el video:', error);
+      alert('Hubo un error al actualizar el video. Por favor, inténtalo de nuevo más tarde.');
+    }
+  };
+
   return (
     <>
       {isOpen && (
         <ModalOverlay>
           <ModalContent>
             <ModalHeader>
-              <ModalTitle>Editar Card</ModalTitle>
+              <ModalTitle>Editar Video</ModalTitle>
               <CloseButton onClick={onClose}>
                 <FaTimes />
               </CloseButton>
@@ -105,11 +132,20 @@ const EditModal = ({ isOpen, onClose, tituloActual }) => {
             <ModalBody>
               <InputGroup>
                 <Label>Título</Label>
-                <Input type="text" defaultValue={tituloActual} />
+                <Input
+                  type="text"
+                  name="titulo"
+                  value={editedVideo.titulo}
+                  onChange={handleChange}
+                />
               </InputGroup>
               <InputGroup>
                 <Label>Categoría</Label>
-                <Select>
+                <Select
+                  name="categoria"
+                  value={editedVideo.categoria}
+                  onChange={handleChange}
+                >
                   <option value="Front-End">Front-End</option>
                   <option value="Back-End">Back-End</option>
                   <option value="Innovación y gestión">Innovación y gestión</option>
@@ -117,19 +153,36 @@ const EditModal = ({ isOpen, onClose, tituloActual }) => {
               </InputGroup>
               <InputGroup>
                 <Label>Imagen URL</Label>
-                <Input type="text" placeholder="Ingresa la URL de la imagen" />
+                <Input
+                  type="text"
+                  name="imagen"
+                  value={editedVideo.imagen}
+                  onChange={handleChange}
+                  placeholder="Ingresa la URL de la imagen"
+                />
               </InputGroup>
               <InputGroup>
                 <Label>Video URL</Label>
-                <Input type="text" placeholder="Ingresa la URL del video de YouTube" />
+                <Input
+                  type="text"
+                  name="videoUrl"
+                  value={editedVideo.videoUrl}
+                  onChange={handleChange}
+                  placeholder="Ingresa la URL del video de YouTube"
+                />
               </InputGroup>
               <InputGroup>
                 <Label>Descripción</Label>
-                <TextArea placeholder="Ingresa una descripción del video" />
+                <TextArea
+                  name="descripcion"
+                  value={editedVideo.descripcion}
+                  onChange={handleChange}
+                  placeholder="Ingresa una descripción del video"
+                />
               </InputGroup>
               <ButtonGroup>
-                <Button>Guardar</Button>
-                <Button>Limpiar</Button>
+                <Button onClick={handleSave}>Guardar</Button>
+                <Button onClick={onClose}>Cancelar</Button>
               </ButtonGroup>
             </ModalBody>
           </ModalContent>

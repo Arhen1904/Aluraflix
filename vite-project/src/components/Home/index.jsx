@@ -35,7 +35,7 @@ const Home = () => {
 
   return (
     <div>
-      <Banner slides={slides} interval={5000} /> {/* Cambia cada 5 segundos */}
+      <Banner slides={slides} interval={5000} />
       <Videos/>
     </div>
   );

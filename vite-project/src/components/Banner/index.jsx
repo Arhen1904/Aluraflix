@@ -58,7 +58,7 @@ const Banner = ({ slides, interval = 5000 }) => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
     };
     const intervalId = setInterval(changeSlide, interval);
-    return () => clearInterval(intervalId); // Limpia el intervalo al desmontar el componente
+    return () => clearInterval(intervalId);
   }, [slides, interval]);
 
   const currentSlide = slides[currentIndex];

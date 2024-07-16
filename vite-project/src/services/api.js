@@ -1,7 +1,6 @@
-// src/services/api.js
 import axios from 'axios';
 
-const API_URL = 'http://localhost:3000'; // Ajusta la URL según donde se ejecuta json-server
+const API_URL = 'http://localhost:3000';
 
 export const getVideos = async () => {
   try {
