@@ -1,0 +1,76 @@
+{
+  "videos": [
+    {
+      "id": "1",
+      "titulo": "¿Cuándo usar let, var y const?",
+      "categoria": "Front-End",
+      "imagen": "https://i.ibb.co/J3fX0gt/image1.png",
+      "video": "https://www.youtube.com/watch?v=PztCEdIJITY&t=68s",
+      "descripcion": "¿A veces cuando estás programando sientes dificuldades en saber en qué momento utilizar let, var o const para declarar una variable? En este video te sacamos estas dudas, además de explicarte lo que es escopo global y local en JavaScript."
+    },
+    {
+      "id": "2",
+      "titulo": "¿Qué es Javascript?",
+      "categoria": "Front-End",
+      "imagen": "https://i.ibb.co/mTjFzZ7/image2.png",
+      "video": "https://www.youtube.com/watch?v=GJfOSoaXk4s",
+      "descripcion": "JavaScript: ¿qué es y cómo se hizo este lenguaje que genera muchas discusiones y debates entre la gente del área de desarrollo? Genesys y Gabriela nos hablan exactamente de esto en este Alura Tips."
+    },
+    {
+      "id": "3",
+      "titulo": "Equipo Front-End",
+      "categoria": "Front-End",
+      "imagen": "https://i.ibb.co/b1nxBqc/image3.png",
+      "video": "https://www.youtube.com/watch?v=rpvrLaBQwgg",
+      "descripcion": "En este video, Jeanmarie Quijada, instructora Front End en Alura Latam te explica qué hace el equipo de Front End."
+    },
+    {
+      "id": "4",
+      "titulo": "Spring Framework",
+      "categoria": "Back-End",
+      "imagen": "https://i.ibb.co/kBqmdzY/image4.png",
+      "video": "https://www.youtube.com/watch?v=t-iqt1b2qqk",
+      "descripcion": "¿Busca un framework  para utilizar en sus proyectos? ¿Conoce Spring Framework? Spring es el framework más usado de Java. Nos ofrece herramientas que nos permiten crear proyectos más avanzados, con mejores prácticas y en menor tiempo."
+    },
+    {
+      "id": "5",
+      "titulo": "¿Qué es SQL y noSQL?",
+      "categoria": "Back-End",
+      "imagen": "https://i.ibb.co/FxYFJhh/image5.png",
+      "video": "https://www.youtube.com/watch?v=cLLKVd5CNLc",
+      "descripcion": "¿Cuáles son las diferencias entre una estructura de datos relacional (SQL) y una no relacional (NoSQL) y cuáles son las principales ventajas de cada una? Álvaro Camacho lo explica en este vídeo."
+    },
+    {
+      "id": "6",
+      "titulo": "Simplificando tu código en Java",
+      "categoria": "Back-End",
+      "imagen": "https://i.ibb.co/NZF50LR/image6.png",
+      "video": "https://www.youtube.com/watch?v=EoPvlE85XAQ",
+      "descripcion": "En este Alura+ la instructora Génesys Rondón nos enseña a simplificar esta tarea usando un tipo de dato especial llamado enum."
+    },
+    {
+      "id": "7",
+      "titulo": "¿Qué son las Soft Skills?",
+      "categoria": "Innovación y gestión",
+      "imagen": "https://i.ibb.co/mDJDz2X/image7.png",
+      "video": "https://www.youtube.com/watch?v=vhwspfvI52k",
+      "descripcion": "En este video de Alura Tips, Pri Stuani nos habla de las habilidades más buscadas por las empresas en sus profesionales y cómo las Soft Skills te ayudan en el día a día."
+    },
+    {
+      "id": "8",
+      "titulo": "Las 7 Soft Skills más deseadas",
+      "categoria": "Innovación y gestión",
+      "imagen": "https://i.ibb.co/7kKxnVk/image8.png",
+      "video": "https://www.youtube.com/watch?v=YhR7Zp8NUzE",
+      "descripcion": "Quédate en este video con nosotros que vamos a explicarte la importancia de estas habilidades y porque son tan requeridas en el mercado laboral."
+    },
+    {
+      "id": "9",
+      "titulo": "¿Qué son las metodologias ágiles?",
+      "categoria": "Innovación y gestión",
+      "imagen": "https://i.ibb.co/XbqNWyX/image9.png",
+      "video": "https://www.youtube.com/watch?v=6N3OkLCfK-0",
+      "descripcion": "En este video nuestra invitada, Andyara, nos explicará que són las muy conocidas hoy en día metodologias ágiles"
+    }
+  ]
+}
