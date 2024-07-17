@@ -1,5 +1,7 @@
 # React + Vite
+
 Aluraflix
+
 Aluraflix es una aplicación web que permite a los usuarios visualizar, agregar, editar y eliminar videos organizados por categorías. La aplicación está diseñada con una estética minimalista.
 
 Características
